@@ -1,0 +1,14 @@
+$h: 40%;
+
+.middle {
+  height: 100% - $h * 2;
+}
+
+.top, .bottom {
+  height: $h;
+}
+
+.bottom {
+  display: flex;
+  align-items: flex-end;
+}
