@@ -1,0 +1,7 @@
+{
+  "name": "quick-bee",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
