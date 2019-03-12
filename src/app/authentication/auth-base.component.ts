@@ -33,6 +33,10 @@ export class AuthBaseComponent implements OnInit {
     return this._transitions.get(this._activatedComponent).to;
   }
 
+  get hideSignUp() {
+    return this._activatedComponent !== LoginComponent;
+  }
+
   onActivatedComponent (component) {
     this._activatedComponent = component.constructor;
   }

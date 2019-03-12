@@ -1,25 +1,22 @@
-<ion-grid>
-  <ion-row>
-    <ion-item>
-      <ion-label position="floating">Email Address</ion-label>
-      <ion-input [formControl]="emailControl" type="email"></ion-input>
-    </ion-item>
-  </ion-row>
+<div>
+  <ion-item>
+    <ion-label position="floating">Email Address</ion-label>
+    <ion-input [formControl]="emailControl" type="email"></ion-input>
+  </ion-item>
+</div>
 
-  <ion-row>
-    <ion-item>
-      <ion-label position="floating">Password</ion-label>
-      <ion-input [formControl]="passwordControl" type="password"></ion-input>
-    </ion-item>
-  </ion-row>
+<div>
+  <ion-item>
+    <ion-label position="floating">Password</ion-label>
+    <ion-input [formControl]="passwordControl" type="password"></ion-input>
+  </ion-item>
+</div>
 
-  <ion-row class="d-flex" align-items-center>
-    <ion-col size="5" class="d-flex">
-      <ion-button class="full-width" expand="block" (click)="signIn()">Sign in</ion-button>
-    </ion-col>
-    <ion-col size="7" class="ion-text-end">
-      <a href="#" routerLink="/home">Forgot password?</a>
-    </ion-col>
-  </ion-row>
-
-</ion-grid>
+<div class="d-flex ion-align-items-center">
+  <ion-col size="5" class="d-flex">
+    <ion-button class="full-width" expand="block" (click)="signIn()">Sign in</ion-button>
+  </ion-col>
+  <ion-col size="7" class="ion-text-end">
+    <a href="#" routerLink="/home">Forgot password?</a>
+  </ion-col>
+</div>

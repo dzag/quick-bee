@@ -1,6 +1,23 @@
-<ion-button expand="full" (click)="withEmail()">Sign in with email</ion-button>
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <ion-button expand="block" (click)="withEmail()">Sign in with email</ion-button>
+    </ion-col>
+  </ion-row>
 
-<ion-row>
-  <ion-col>Facebook</ion-col>
-  <ion-col>Google</ion-col>
-</ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-button expand="block">
+        <ion-icon name="logo-facebook"></ion-icon>
+        Facebook
+      </ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button expand="block">
+        <ion-icon name="logo-google"></ion-icon>
+        Google
+      </ion-button>
+    </ion-col>
+  </ion-row>
+
+</ion-grid>

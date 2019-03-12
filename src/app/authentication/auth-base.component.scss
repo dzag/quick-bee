@@ -3,13 +3,15 @@ ion-grid {
 }
 
 .top {
+  height: 45vh;
 }
 
 .middle {
-  height: 300px;
+  height: 35vh;
   padding: 0 0.5em;
 }
 
 
 .bottom {
+  height: 100vh - 45vh - 35vh;
 }
