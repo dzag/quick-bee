@@ -1,14 +1,12 @@
-$h: 33.33%;
+.top {
+  height: 45%;
+}
 
 .middle {
-  height: 100% - $h * 2;
+  height: 35%;
 }
 
-.top, .bottom {
-  height: $h;
-}
 
 .bottom {
-  display: flex;
-  align-items: flex-end;
+  height: 20%;
 }
