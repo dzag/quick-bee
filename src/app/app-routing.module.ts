@@ -11,7 +11,7 @@ const routes: Routes = [
     path: '',
     component: MainLayoutComponent,
     children: [
-      { path: '', redirectTo: 'home', pathMatch: 'full' },
+      { path: '', redirectTo: '/auth', pathMatch: 'full' },
       { path: 'home', loadChildren: './home/home.module#HomePageModule' },
     ],
   },

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { LoginComponent } from '@app/authentication/login/login.component';
 
 @Component({
   selector: 'app-auth-base',
@@ -7,8 +9,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AuthBaseComponent implements OnInit {
 
-  constructor() { }
+  private _transitions = new Map([
+    [LoginComponent, { to: '/auth' }]
+  ]);
 
-  ngOnInit() {}
+  private _activatedComponent;
 
+  constructor (private route: ActivatedRoute,
+  ) { }
+
+  ngOnInit () {
+  }
+
+  get canBack () {
+    return this._transitions.has(this._activatedComponent);
+  }
+
+  get backTo () {
+    if (!this._activatedComponent || !this.canBack) {
+      return;
+    }
+
+    return this._transitions.get(this._activatedComponent).to;
+  }
+
+  onActivatedComponent (component) {
+    this._activatedComponent = component.constructor;
+  }
 }

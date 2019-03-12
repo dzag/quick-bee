@@ -1,12 +1,15 @@
+ion-grid {
+  min-height: 100%;
+}
+
 .top {
-  height: 45%;
 }
 
 .middle {
-  height: 35%;
+  height: 300px;
+  padding: 0 0.5em;
 }
 
 
 .bottom {
-  height: 20%;
 }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-auth-home',
@@ -7,8 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AuthHomeComponent implements OnInit {
 
-  constructor() { }
+  constructor (private router: Router,
+               private navController: NavController,
+  ) { }
 
-  ngOnInit() {}
+  ngOnInit () {}
 
+  withEmail () {
+    this.navController.navigateForward('/auth/login');
+  }
 }
