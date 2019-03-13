@@ -1,0 +1,21 @@
+.image-call-actions {
+  position: absolute;
+  bottom: -3vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  color: white;
+}
+
+.images img {
+  width: 30vw;
+  height: 100%;
+  padding: 1vw;
+  border-radius: 8px;
+}
+
+ion-content main {
+  margin-top: 10vh;
+  padding: 0 5vw;
+}

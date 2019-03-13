@@ -1,11 +1,21 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ExploreMainComponent } from '@app/modules/explore/explore-main.component';
+import { ExploreMainComponent } from './explore-main.component';
+import { ItemDetailsComponent } from './item-details/item-details.component';
 
 const routes: Routes = [
   {
     path: '',
     component: ExploreMainComponent,
+  },
+  {
+    path: ':categoryId',
+    children: [
+      {
+        path: ':id',
+        component: ItemDetailsComponent,
+      }
+    ]
   }
 ];
 

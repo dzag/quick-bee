@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      {{ item?.name }}
+    </ion-title>
+
+    <ion-buttons slot="start">
+      <ion-back-button text="" defaultHref="app/explore">
+      </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div style="height: 45vh; position: relative; margin-bottom: 3vh">
+    <div #background
+         style="height: 100%; background-position: center; background-size: cover;
+         filter: brightness(60%);">
+    </div>
+    <div class="image-call-actions">
+      <div style="margin-bottom: 3vh; text-align: center">
+        <div style="font-size: 2em">{{ item?.price | currency }}</div>
+        <div>{{ item?.shortDescription }}</div>
+      </div>
+      <div class="d-flex" style="width: 100%">
+        <ion-button style="width: 50%; padding-left: 1em; padding-right: 0.25em" expand="block">Call</ion-button>
+        <ion-button style="width: 50%; padding-right: 1em; padding-left: 0.25em" expand="block">Message</ion-button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <header>
+      <h5>{{ item?.name }}</h5>
+    </header>
+
+    <article>
+      <ng-container *ngIf="!expanded">
+        <p>{{ shortDesc }}. <a href="#" (click)="$event.preventDefault(); expanded = true">More details</a></p>
+      </ng-container>
+      <ng-container *ngIf="expanded">
+        <p>{{ item?.description }} <a href="#" (click)="$event.preventDefault(); expanded = false">Less details</a></p>
+      </ng-container>
+    </article>
+
+    <div class="images d-flex" style="
+      flex-flow: row wrap;
+    ">
+      <ng-container *ngFor="let image of item?.images">
+        <img [src]="image">
+      </ng-container>
+    </div>
+
+  </main>
+
+</ion-content>

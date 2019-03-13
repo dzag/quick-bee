@@ -7,7 +7,7 @@
 
 <div class="d-flex">
 
-  <ion-card *ngFor="let item of _items">
+  <ion-card *ngFor="let item of _items" (click)="showDetails(item)">
     <img [src]="item.thumbnail" alt="">
     <ion-card-header>
       <ion-card-title>{{ item.name }}</ion-card-title>
