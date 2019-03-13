@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { MainLayoutComponent } from '@core/components/main-layout/main-layout.component';
 
 const routes: Routes = [
@@ -8,11 +8,12 @@ const routes: Routes = [
     loadChildren: './authentication/authentication.module#AuthenticationModule',
   },
   {
-    path: '',
+    path: 'app',
     component: MainLayoutComponent,
     children: [
-      { path: '', redirectTo: '/auth', pathMatch: 'full' },
-      { path: 'home', loadChildren: './home/home.module#HomePageModule' },
+      { path: '', redirectTo: 'explore', pathMatch: 'full' },
+      { path: 'explore', loadChildren: '@app/modules/explore/explore.module#ExploreModule' },
+      { path: 'feeds', loadChildren: '@app/modules/feeds/feeds.module#FeedsModule' },
     ],
   },
 ];
