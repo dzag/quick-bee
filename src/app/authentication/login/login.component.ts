@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
 
   signIn () {
     timer(500).subscribe(() => {
-      this.router.navigate(['/home']);
+      this.router.navigate(['/app/explore']);
     });
   }
 }
