@@ -1,0 +1,17 @@
+<div class="d-flex" style="align-items: flex-end; justify-content: space-between; padding: 1em 1em 0 1em">
+  <h5 style="margin: 0;">{{ name }}</h5>
+  <small>
+    <a href="#">View all</a>
+  </small>
+</div>
+
+<div class="d-flex">
+
+  <ion-card *ngFor="let item of _items">
+    <img [src]="item.thumbnail" alt="">
+    <ion-card-header>
+      <ion-card-title>{{ item.name }}</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+</div>

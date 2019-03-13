@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "Motors"
+  },
+  {
+    "id": 2,
+    "name": "Classified"
+  },
+  {
+    "id": 3,
+    "name": "Properties"
+  },
+  {
+    "id": 4,
+    "name": "Services"
+  },
+  {
+    "id": 5,
+    "name": "Jobs"
+  }
+]
