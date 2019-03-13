@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ExploreMainComponent } from './explore-main.component';
 import { ItemDetailsComponent } from './item-details/item-details.component';
+import { CategoryListingComponent } from './category-listing/category-listing.component';
 
 const routes: Routes = [
   {
@@ -11,6 +12,10 @@ const routes: Routes = [
   {
     path: ':categoryId',
     children: [
+      {
+        path: '',
+        component: CategoryListingComponent,
+      },
       {
         path: ':id',
         component: ItemDetailsComponent,

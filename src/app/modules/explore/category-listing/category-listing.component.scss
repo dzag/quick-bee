@@ -1,0 +1,28 @@
+$radius: 6px;
+
+.infos {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 0 0.5em;
+  border-top-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+
+  h5, h6 {
+    margin: 0;
+  }
+
+}
+
+.card {
+  padding: 1em;
+
+  img {
+    width: 30vw;
+
+    border-top-left-radius: $radius;
+    border-bottom-left-radius: $radius;
+  }
+}

@@ -7,6 +7,7 @@ import { SharedModule } from '@app/shared/shared.module';
 import { ExploreMainComponent } from './explore-main.component';
 import { ExploreListComponent } from './explore-list/explore-list.component';
 import { ItemDetailsComponent } from './item-details/item-details.component';
+import { CategoryListingComponent } from './category-listing/category-listing.component';
 
 @NgModule({
   imports: [
@@ -18,6 +19,7 @@ import { ItemDetailsComponent } from './item-details/item-details.component';
     ExploreMainComponent,
     ExploreListComponent,
     ItemDetailsComponent,
+    CategoryListingComponent,
   ],
 })
 export class ExploreModule {}
