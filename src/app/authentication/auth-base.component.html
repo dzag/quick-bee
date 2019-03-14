@@ -10,7 +10,7 @@
 </div>
 
 <div class="middle">
-  <ion-content>
+  <ion-content [scrollY]="false">
     <ion-router-outlet animated="false"
                        (activate)="onActivatedComponent($event)">
     </ion-router-outlet>
