@@ -14,6 +14,9 @@ const routes: Routes = [
       { path: '', redirectTo: 'explore', pathMatch: 'full' },
       { path: 'explore', loadChildren: '@app/modules/explore/explore.module#ExploreModule' },
       { path: 'feeds', loadChildren: '@app/modules/feeds/feeds.module#FeedsModule' },
+      { path: 'deals', loadChildren: '@app/modules/deals/deals.module#DealsModule' },
+      { path: 'messages', loadChildren: '@app/modules/message/message.module#MessageModule' },
+      { path: 'settings', loadChildren: '@app/modules/setting/setting.module#SettingModule' },
     ],
   },
 ];
