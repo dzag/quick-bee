@@ -38,6 +38,15 @@
   <main>
     <header>
       <h5>{{ item?.name }}</h5>
+
+      <div>
+        <ng-container *ngFor="let i of Array(item?.rating)">
+          <ion-icon color="warning" name="star"></ion-icon>
+        </ng-container>
+        <ng-container *ngFor="let i of Array(5 - (item?.rating || 0))">
+          <ion-icon color="medium" name="star"></ion-icon>
+        </ng-container>
+      </div>
     </header>
 
     <article>
@@ -60,3 +69,7 @@
   </main>
 
 </ion-content>
+
+<ng-template #stars let-rate="rate">
+
+</ng-template>

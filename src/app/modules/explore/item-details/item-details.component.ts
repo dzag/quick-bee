@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { ItemService } from '@app/modules/explore/item.service';
 import { ActivatedRoute } from '@angular/router';
 import { take } from 'lodash';
@@ -16,6 +16,8 @@ export class ItemDetailsComponent implements OnInit {
 
   shortDesc = '';
   expanded = false;
+
+  Array = Array;
 
   constructor (private itemService: ItemService,
                private route: ActivatedRoute,
