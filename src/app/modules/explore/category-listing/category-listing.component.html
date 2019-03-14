@@ -12,17 +12,16 @@
 </ion-header>
 
 <ion-content>
-  <div class="card" style="display: flex; ">
-    <div>
-      <img src="/assets/google-1.jpg" alt="" style="width: 30vw;">
-    </div>
-    <div class="infos">
-      <div>
-        <div>2 Bedroom Apartment</div>
-        <div>1978 Jasper Avenue #22A</div>
+  <ng-container *ngFor="let item of items">
+    <div class="card" style="display: flex;" [routerLink]="['/app/explore', categoryId, item.id]">
+      <div class="img" [style.background-image]="'url(' +  '/assets/google-1.jpg' + ')'"></div>
+      <div class="infos">
+        <div style="padding-top: 0.2em">
+          <h5>{{ item.name }}</h5>
+          <div class="subheader">{{ item.shortDescription }}</div>
+        </div>
+        <div class="price">{{ item.price | currency:'USD':'symbol':'1.0-0' }}</div>
       </div>
-      <div>$1,120</div>
     </div>
-  </div>
-
+  </ng-container>
 </ion-content>

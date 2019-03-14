@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { first, flatMap, map } from 'rxjs/operators';
+import { filter, first, flatMap, map, toArray } from 'rxjs/operators';
 import { randomArray } from '@core/utils';
 
 @Injectable({ providedIn: 'root' })
@@ -16,13 +16,22 @@ export class ItemService {
   }
 
   findOne (id: number) {
-    return this.base().pipe().pipe(
+    return this.base().pipe(
       flatMap(x => x),
       first(item => item.id === id)
+    );
+  }
+
+  findByCategory (categoryId: number) {
+    return this.base().pipe(
+      flatMap(x => x),
+      filter(item => item.categoryId === categoryId),
+      toArray(),
     );
   }
 
   private base () {
     return this._http.get<any[]>('/assets/db/items.json');
   }
+
 }

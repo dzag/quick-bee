@@ -1,28 +1,58 @@
+@import "../../../../theme/variables";
+
 $radius: 6px;
 
-.infos {
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  padding: 0 0.5em;
-  border-top-right-radius: $radius;
-  border-bottom-right-radius: $radius;
-
-  h5, h6 {
-    margin: 0;
-  }
-
-}
+$borderStyle: 1px solid rgb(238, 238, 238);
 
 .card {
   padding: 1em;
 
-  img {
+  .img {
     width: 30vw;
+    height: 12vh;
+    background-origin: border-box;
+    background-size: cover;
+
+    border-top: $borderStyle;
+    border-left: $borderStyle;
+    border-bottom: $borderStyle;
 
     border-top-left-radius: $radius;
     border-bottom-left-radius: $radius;
   }
+
+  .infos {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding-left: 1em;
+    border-top-right-radius: $radius;
+    border-bottom-right-radius: $radius;
+
+    border-top: $borderStyle;
+    border-right: $borderStyle;
+    border-bottom: $borderStyle;
+
+    width: 70vw;
+
+    h5, h6 {
+      margin: 0;
+    }
+
+    .subheader {
+      color: #8e8e8e;
+      font-size: 0.8em;
+      margin-top: 0.2em;
+    }
+
+    .price {
+      color: var(--ion-color-secondary);
+      font-size: 1.5em;
+      padding-bottom: 0.2em;
+    }
+
+  }
+
 }
