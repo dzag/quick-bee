@@ -1,17 +1,64 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Explore</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ng-template #smallCategory let-item="item" let-isLeft="isLeft" let-index="index">
+  <div *ngIf="item" class="right-item-wrapper"
+       [ngClass]="{ left: isLeft, right: !isLeft}"
+       (click)="showCategoryListing(item)">
+    <div class="right-item bg-{{index}}">
+      <div style="margin-right: 0.5em">
+        <ion-icon [src]="item.icon ? '/assets/' + item.icon +  '.svg' : ''"></ion-icon>
+      </div>
+      <div> {{ item?.name }} </div>
+    </div>
+  </div>
+</ng-template>
+
 <ion-content>
-  <app-explore-list
-      name="Popular Trending"
-      from="popular"
-  ></app-explore-list>
 
-  <app-explore-list
-      name="Featured Ads"
-      from="featured-ads"
-  ></app-explore-list>
+  <div style="padding-top: 1.5em"></div>
 
-  <app-explore-list
-      name="Top Deals"
-      from="top-deals"
-  ></app-explore-list>
+  <div style="display: flex; height: 33vw">
+    <div class="category-button" (click)="showCategoryListing(bigCat)"
+         style="width: calc(33vw - 0.5em); padding: 1em 0.5em 1em 1em;">
+      <div class="bg-0"
+           style="height: 100%; border: 1px solid; border-radius: 4px; display: flex; justify-content: center; align-items: center">
+        <div style="display: flex; flex-direction: column; align-items: center">
+          <div>
+            <ion-icon [src]="bigCat?.icon ? '/assets/' + bigCat.icon + '.svg' : ''"></ion-icon>
+          </div>
+          <div> {{ bigCat?.name }} </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="category-button" style="width: 67vw; padding: 1em 1em 1em 0.5em;">
+      <div class="right-row top">
+        <ng-container [ngTemplateOutlet]="smallCategory"
+                      [ngTemplateOutletContext]="{ item: rightTopCats[0], isLeft: true, index: 1 }"
+        ></ng-container>
+        <ng-container [ngTemplateOutlet]="smallCategory"
+                      [ngTemplateOutletContext]="{ item: rightTopCats[1], isLeft: false, index: 2 }"
+        ></ng-container>
+      </div>
+      <div class="right-row bottom">
+        <ng-container [ngTemplateOutlet]="smallCategory"
+                      [ngTemplateOutletContext]="{ item: rightBotCats[0], isLeft: true, index: 3 }"
+        ></ng-container>
+        <ng-container [ngTemplateOutlet]="smallCategory"
+                      [ngTemplateOutletContext]="{ item: rightBotCats[1], isLeft: false, index: 4 }"
+        ></ng-container>
+      </div>
+    </div>
+  </div>
+
+  <app-explore-list name="Popular Trending" from="popular"></app-explore-list>
+
+  <app-explore-list name="Featured Ads" from="featured-ads"></app-explore-list>
+
+  <app-explore-list name="Top Deals" from="top-deals"></app-explore-list>
 
 </ion-content>

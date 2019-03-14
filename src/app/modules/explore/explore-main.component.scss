@@ -2,3 +2,61 @@ ion-card-title {
   font-size: 12px;
   text-align: center;
 }
+
+.category-button {
+  color: white;
+}
+
+.right-item-wrapper {
+  width: 50%;
+
+  &.left {
+    padding-right: 0.25em;
+  }
+
+  &.right {
+    padding-left: 0.25em;
+  }
+}
+
+.right-item {
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.right-row {
+  display: flex;
+  height: 50%;
+
+  &.top {
+    padding-bottom: 0.25em;
+  }
+
+  &.bottom {
+    padding-top: 0.25em;
+  }
+
+}
+
+.bg-0 {
+  background-color: #FF7282;
+}
+
+.bg-1 {
+  background-color: #19D191;
+}
+
+.bg-2 {
+  background-color: #4BCDDD;
+}
+
+.bg-3 {
+  background-color: #FE7B45;
+}
+
+.bg-4 {
+  background-color: #F3B163;
+}

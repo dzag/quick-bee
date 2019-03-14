@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CategoryService } from '@app/modules/explore/category.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-explore-main',
@@ -7,8 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExploreMainComponent implements OnInit {
 
-  constructor() { }
+  bigCat;
+  rightTopCats = [];
+  rightBotCats = [];
 
-  ngOnInit() {}
+  constructor (private categoryService: CategoryService,
+               private router: Router,
+  ) { }
 
+  ngOnInit () {
+    this.categoryService.get().subscribe(categories => {
+      this.bigCat = categories[0];
+      this.rightTopCats = categories.slice(1, 3);
+      this.rightBotCats = categories.slice(3, 5);
+    });
+  }
+
+  showCategoryListing (category: any) {
+    this.router.navigate(['/app/explore/', category.id]);
+  }
 }

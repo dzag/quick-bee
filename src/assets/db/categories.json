@@ -1,22 +1,27 @@
 [
   {
     "id": 1,
-    "name": "Motors"
+    "name": "Motors",
+    "icon": "car"
   },
   {
     "id": 2,
-    "name": "Classified"
+    "name": "Classified",
+    "icon": "tag"
   },
   {
     "id": 3,
-    "name": "Properties"
+    "name": "Properties",
+    "icon": "home"
   },
   {
     "id": 4,
-    "name": "Services"
+    "name": "Services",
+    "icon": "tools"
   },
   {
     "id": 5,
-    "name": "Jobs"
+    "name": "Jobs",
+    "icon": "briefcase"
   }
 ]
