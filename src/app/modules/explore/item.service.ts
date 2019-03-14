@@ -15,6 +15,12 @@ export class ItemService {
     );
   }
 
+  findByType(type) {
+    return this.base().pipe(
+      map(items => randomArray(items, 15))
+    );
+  }
+
   findOne (id: number) {
     return this.base().pipe(
       flatMap(x => x),

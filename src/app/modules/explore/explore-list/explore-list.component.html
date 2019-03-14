@@ -1,7 +1,7 @@
 <div class="d-flex" style="align-items: flex-end; justify-content: space-between; padding: 1em 1em 0 1em">
   <h5 style="margin: 0;">{{ name }}</h5>
   <small>
-    <a href="#">View all</a>
+    <a href="#" [routerLink]="['/app/explore/meta']" [queryParams]="{ type: from, name: name }">View all</a>
   </small>
 </div>
 

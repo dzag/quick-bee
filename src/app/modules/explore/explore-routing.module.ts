@@ -10,6 +10,10 @@ const routes: Routes = [
     component: ExploreMainComponent,
   },
   {
+    path: 'meta',
+    component: CategoryListingComponent,
+  },
+  {
     path: ':categoryId',
     children: [
       {
