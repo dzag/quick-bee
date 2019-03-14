@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CategoryService } from '@app/modules/explore/category.service';
 import { ItemService } from '@app/modules/explore/item.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-category-listing',
@@ -27,7 +27,6 @@ export class CategoryListingComponent implements OnInit {
     this.itemService.findByCategory(this.categoryId).subscribe(items => {
       this.items = items;
     });
-
   }
 
   get categoryId () {
