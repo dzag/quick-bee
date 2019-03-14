@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-setting-main',
@@ -7,8 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SettingMainComponent implements OnInit {
 
-  constructor() { }
+  constructor (private router: Router,
+               private navController: NavController,
+  ) { }
 
-  ngOnInit() {}
+  ngOnInit () {}
 
+  logout () {
+    localStorage.removeItem('token');
+    this.navController.navigateRoot('/auth');
+  }
 }
