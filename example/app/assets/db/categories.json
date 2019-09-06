@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "name": "Motors",
+    "icon": "car"
+  },
+  {
+    "id": 2,
+    "name": "Classified",
+    "icon": "tag"
+  },
+  {
+    "id": 3,
+    "name": "Properties",
+    "icon": "home"
+  },
+  {
+    "id": 4,
+    "name": "Services",
+    "icon": "tools"
+  },
+  {
+    "id": 5,
+    "name": "Jobs",
+    "icon": "briefcase"
+  }
+]
