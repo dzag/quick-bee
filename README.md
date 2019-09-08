@@ -9,3 +9,5 @@ https://www.behance.net/gallery/59667409/QuickBee
 npm run istart
 ionic cordova run android -l
 ```
+### Demo
+https://dzag-quick-bee.netlify.com
